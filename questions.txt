@@ -1,0 +1,20 @@
+What is the capital of France?,London,Paris,Berlin,Paris
+Who wrote 'Hamlet'?,William Shakespeare,Charles Dickens,Leo Tolstoy,William Shakespeare
+What is the chemical symbol for water?,H2O,CO2,O2,H2O
+Which planet is closest to the Sun?,Mars,Venus,Mercury,Mercury
+What is the largest ocean on Earth?,Atlantic,Pacific,Indian,Pacific
+Who painted the Mona Lisa?,Vincent van Gogh,Leonardo da Vinci,Pablo Picasso,Leonardo da Vinci
+Which country invented pizza?,France,Italy,Greece,Italy
+What is the smallest country in the world?,Vatican City,Monaco,San Marino,Vatican City
+What year did World War II end?,1940,1945,1950,1945
+Which element has the atomic number 1?,Oxygen,Hydrogen,Helium,Hydrogen
+Who discovered gravity?,Isaac Newton,Albert Einstein,Galileo Galilei,Isaac Newton
+What is the capital of Japan?,Beijing,Seoul,Tokyo,Tokyo
+How many continents are there?,5,6,7,7
+What is the hardest natural substance on Earth?,Gold,Iron,Diamond,Diamond
+Who was the first man to walk on the moon?,Neil Armstrong,Buzz Aldrin,Yuri Gagarin,Neil Armstrong
+Which country is known as the Land of the Rising Sun?,China,Japan,South Korea,Japan
+Which is the longest river in the world?,Amazon,Nile,Mississippi,Nile
+What is the name of the largest desert on Earth?,Sahara,Antarctica,Gobi,Antarctica
+Who developed the theory of relativity?,Isaac Newton,Nikola Tesla,Albert Einstein,Albert Einstein
+What is the national sport of Canada?,Basketball,Ice Hockey,Baseball,Ice Hockey
