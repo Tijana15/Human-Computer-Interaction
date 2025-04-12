@@ -52,5 +52,11 @@ Koji je glavni grad Francuske?,Berlin,Madrid,Pariz,Pariz
 
 Studentski projekat iz predmeta **Interakcija čovjek-računar (Human-Computer Interaction)**
 
+## Vizual
+![image](https://github.com/user-attachments/assets/57e14d6e-b8bf-496c-8d64-7cd2e07439dd)
+![image](https://github.com/user-attachments/assets/c891e206-021d-4444-b10f-798fe7af2c57)
+![image](https://github.com/user-attachments/assets/530dc9cd-58f1-444c-a214-4827f71f95dc)
+
+
 
 
