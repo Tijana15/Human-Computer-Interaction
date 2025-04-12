@@ -20,3 +20,5 @@ C:\Users\PC\Desktop\4 GODINA\HCI\Projekti\Projekat_B-Kviz\Projekat_B-Kviz\obj\De
 C:\Users\PC\Desktop\4 GODINA\HCI\Projekti\Projekat_B-Kviz\Projekat_B-Kviz\obj\Debug\net7.0-windows\ref\Projekat_B-Kviz.dll
 C:\Users\PC\Desktop\4 GODINA\HCI\Projekti\Projekat_B-Kviz\Projekat_B-Kviz\obj\Debug\net7.0-windows\Styles.baml
 C:\Users\PC\Desktop\4 GODINA\HCI\Projekti\Projekat_B-Kviz\Projekat_B-Kviz\obj\Debug\net7.0-windows\App.baml
+C:\Users\PC\Desktop\4 GODINA\HCI\Projekti\Projekat_B-Kviz\Projekat_B-Kviz\bin\Debug\net7.0-windows\Resources\questions.txt
+C:\Users\PC\Desktop\4 GODINA\HCI\Projekti\Projekat_B-Kviz\Projekat_B-Kviz\obj\Debug\net7.0-windows\Projekat_B-Kviz_Content.g.cs

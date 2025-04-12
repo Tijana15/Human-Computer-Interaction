@@ -5,6 +5,7 @@ using System.Windows.Controls;
 using System.IO;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
+using System;
 
 namespace Projekat_B_Kviz
 {
@@ -48,7 +49,9 @@ namespace Projekat_B_Kviz
 
         private void LoadQuestions()
         {
-            string filePath = "C:\\Users\\PC\\Desktop\\4 GODINA\\HCI\\Projekti\\Projekat_B-Kviz\\questions.txt";
+            string basePath = AppDomain.CurrentDomain.BaseDirectory;
+            string filePath = Path.Combine(basePath, "Resources", "questions.txt");
+
             List<Question> allQuestions = new List<Question>();
 
             if (File.Exists(filePath))
@@ -89,8 +92,8 @@ namespace Projekat_B_Kviz
             }
             else
             {
-                MessageBox.Show("Questions file not found! Please check the file path.",
-                    "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Loading file from: {filePath}");
+
                 ResetGameState();
             }
         }
