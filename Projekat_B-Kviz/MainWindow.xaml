@@ -5,50 +5,203 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekat_B_Kviz"
         mc:Ignorable="d"
-        Title="Welcome to quiz game!" Height="800" Width="800" ResizeMode="NoResize" 
+        Title="Welcome to Quiz Game!" 
+        Height="800" Width="1000" 
+        MinHeight="600" MinWidth="800"
+        WindowStartupLocation="CenterScreen"
         Icon="C:\Users\PC\Desktop\4 GODINA\HCI\Projekti\Projekat_B-Kviz\Icon.jpg">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\PC\Desktop\4 GODINA\HCI\Projekti\Projekat_B-Kviz\Background.jpg" Opacity="0.8"/>
+            <StaticResource ResourceKey="BackgroundGradient"/>
         </Grid.Background>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="C:\Users\PC\Desktop\4 GODINA\HCI\Projekti\Projekat_B-Kviz\Background.jpg" 
+                            Opacity="0.2" 
+                            Stretch="UniformToFill"/>
+            </Grid.Background>
+        </Grid>
 
+        <Grid Margin="25">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="350"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal" Margin="10">
-            <ComboBox x:Name="LevelSelector" Height="22" Width="149" IsEditable="True" Text="Choose difficulty" IsReadOnly="True" Background="#ffcc00">
-                <ComboBoxItem Content="Easy (10 questions)" x:Name="questions10"/>
-                <ComboBoxItem Content="Hard (20 questions)" x:Name="questions20"/>
-            </ComboBox>
-            <Button Name="StartQuizButton" Content="Start Quiz" Height="27" Width="150" Margin="10" Click="StartQuiz_Click" Background="SaddleBrown" Foreground="white" FontWeight="Bold" />
-        </StackPanel>
+            <Border Grid.Column="0" Grid.Row="0"
+                    Style="{DynamicResource HeaderBorderStyle}">
+                <Grid Margin="20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
 
+                    <TextBlock Text="QUIZ GAME" 
+                               Style="{DynamicResource TitleTextStyle}"/>
 
-        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Orientation="Vertical" Margin="10,163,0,0" Grid.RowSpan="2">
-            <TextBlock x:Name="QuestionText" Text="Question will appear here" FontSize="22" FontWeight="Bold" Foreground="White" TextWrapping="Wrap" Width="600" TextAlignment="Center" Margin="10" Background="SaddleBrown"/>
+                    <StackPanel Grid.Column="1" 
+                                Orientation="Horizontal" 
+                                HorizontalAlignment="Right">
+                        <ComboBox x:Name="LevelSelector" 
+                                  Width="180"
+                                  Style="{DynamicResource ModernComboBox}"
+                                  IsEditable="True" 
+                                  Text="Choose difficulty" 
+                                  IsReadOnly="True">
+                            <ComboBoxItem Content="Easy (10 questions)" x:Name="questions10"/>
+                            <ComboBoxItem Content="Hard (20 questions)" x:Name="questions20"/>
+                        </ComboBox>
 
-            <Button x:Name="Answer1" Content="Answer 1" Width="300" Height="50" Background="#ffb366" Foreground="White" FontSize="16" Click="Answer_Click" Margin="5"/>
-            <Button x:Name="Answer2" Content="Answer 2" Width="300" Height="50" Background="#ffb366" Foreground="White" FontSize="16" Click="Answer_Click" Margin="5"/>
-            <Button x:Name="Answer3" Content="Answer 3" Width="300" Height="50" Background="#ffb366" Foreground="White" FontSize="16" Click="Answer_Click" Margin="5"/>
-        </StackPanel>
+                        <Button x:Name="StartQuizButton" 
+                                Content="START QUIZ" 
+                                Width="150" 
+                                Style="{DynamicResource ModernButton}"
+                                Background="#4CAF50"
+                                Margin="15,0,0,0"
+                                Click="StartQuiz_Click"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
 
+            <Border Grid.Row="1" Grid.Column="0"
+                    Style="{DynamicResource ContentBorderStyle}">
+                <Grid Margin="25">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
 
-        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10">
-            <TextBlock Text="Score:" FontSize="18" FontWeight="Bold" Foreground="SaddleBrown"/>
-            <TextBlock x:Name="ScoreText" Text="0" FontSize="18" Foreground="SaddleBrown"/>
-            <TextBlock Text="Correct answers:" FontSize="18" FontWeight="Bold" Foreground="SaddleBrown"/>
-            <TextBlock x:Name="CorrectNum" Text="0" FontSize="18" Foreground="SaddleBrown"/>
-            <TextBlock Text="Left questions:" FontSize="18" FontWeight="Bold" Foreground="SaddleBrown"/>
-            <TextBlock x:Name="LeftQuestionsNum" Text="0" FontSize="18" Foreground="SaddleBrown"/>
+                    <Border Grid.Row="0"
+                            Style="{DynamicResource QuestionBorderStyle}">
+                        <TextBlock x:Name="QuestionText" 
+                                  Text="Your question will appear here" 
+                                  Style="{DynamicResource QuestionTextStyle}"/>
+                    </Border>
 
-            <Button Content="End Game" Click="EndGame_Click" Width="150" Height="40" Background="#ffb366" Foreground="White"  Margin="10" FontWeight="Bold"/>
-            <Button Content="Restart game" Click="RestartGame_Click" Width="150" Height="40" Background="#ffb366" Foreground="White" Margin="10" FontWeight="Bold"/>
-            <Button Content="Help" Click="Help_Click" Width="150" Height="40" Background="#ffb366" Foreground="White" Margin="10" FontWeight="Bold"/>
-        </StackPanel>
+                    <StackPanel Grid.Row="1">
+                        <Button x:Name="Answer1" 
+                               Content="Answer 1" 
+                               Style="{DynamicResource AnswerButton}"
+                               Click="Answer_Click"/>
+
+                        <Button x:Name="Answer2" 
+                               Content="Answer 2" 
+                               Style="{DynamicResource AnswerButton}"
+                               Click="Answer_Click"/>
+
+                        <Button x:Name="Answer3" 
+                               Content="Answer 3" 
+                               Style="{DynamicResource AnswerButton}"
+                               Click="Answer_Click"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Border Style="{DynamicResource ScoreboardBorderStyle}">
+                    <Grid Margin="25">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Text="SCOREBOARD" 
+                                   Style="{DynamicResource ScoreboardHeaderStyle}"/>
+
+                        <StackPanel Grid.Row="1">
+                            <Border Style="{DynamicResource ScoreItemBorderStyle}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="SCORE" 
+                                               Style="{DynamicResource ScoreLabelStyle}"/>
+                                    <TextBlock x:Name="ScoreText" 
+                                               Text="0" 
+                                               Grid.Column="1"
+                                               Style="{DynamicResource ScoreValueStyle}"
+                                               Foreground="#FFEB3B"/>
+                                </Grid>
+                            </Border>
+
+                            <Border Style="{DynamicResource ScoreItemBorderStyle}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="CORRECT" 
+                                               Style="{DynamicResource ScoreLabelStyle}"/>
+                                    <TextBlock x:Name="CorrectNum" 
+                                               Text="0" 
+                                               Grid.Column="1"
+                                               Style="{DynamicResource ScoreValueStyle}"
+                                               Foreground="#4CAF50"/>
+                                </Grid>
+                            </Border>
+
+                            <Border Style="{DynamicResource ScoreItemBorderStyle}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="REMAINING" 
+                                               Style="{DynamicResource ScoreLabelStyle}"/>
+                                    <TextBlock x:Name="LeftQuestionsNum" 
+                                               Text="0" 
+                                               Grid.Column="1"
+                                               Style="{DynamicResource ScoreValueStyle}"
+                                               Foreground="#FF9800"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+
+                <Border Grid.Row="1"
+                        Style="{DynamicResource ActionButtonsBorderStyle}">
+                    <StackPanel Margin="25,20">
+                        <Button Content="END GAME" 
+                                Style="{DynamicResource ModernButton}"
+                                Background="#F44336"
+                                Margin="0,5,0,10"
+                                Click="EndGame_Click"/>
+
+                        <Button Content="RESTART GAME" 
+                                Style="{DynamicResource ModernButton}"
+                                Background="#FF9800"
+                                Margin="0,5,0,10"
+                                Click="RestartGame_Click"/>
+
+                        <Button Content="HELP" 
+                                Style="{DynamicResource ModernButton}"
+                                Background="#009688"
+                                Margin="0,5,0,5"
+                                Click="Help_Click"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>
