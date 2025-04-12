@@ -9,10 +9,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Background.jpg" />
+    <None Remove="Resources\Icon.jpg" />
     <None Remove="Resources\questions.txt" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\Background.jpg" />
+    <Resource Include="Resources\Icon.jpg" />
     <Content Include="Resources\questions.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

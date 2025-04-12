@@ -9,7 +9,7 @@
         Height="800" Width="1000" 
         MinHeight="600" MinWidth="800"
         WindowStartupLocation="CenterScreen"
-        Icon="C:\Users\PC\Desktop\4 GODINA\HCI\Projekti\Projekat_B-Kviz\Icon.jpg">
+        Icon="Resources/Icon.jpg">
 
     <Window.Resources>
         <ResourceDictionary>
@@ -26,7 +26,7 @@
 
         <Grid>
             <Grid.Background>
-                <ImageBrush ImageSource="C:\Users\PC\Desktop\4 GODINA\HCI\Projekti\Projekat_B-Kviz\Background.jpg" 
+                <ImageBrush ImageSource="Resources/Background.jpg" 
                             Opacity="0.2" 
                             Stretch="UniformToFill"/>
             </Grid.Background>
